@@ -726,7 +726,7 @@ const App = () => {
           title="Dashboard 2 — Real Funding Deals (2024–25)"
           subtitle="25 real companies · $10.7B raised · 7 countries"
           badge="5 Insights"
-          defaultOpen={false}
+          defaultOpen={true}
         >
           <div className="dash1-meta">
             <span className="meta-chip"><Briefcase size={12} style={{ display: 'inline', marginRight: 4, verticalAlign: 'middle' }} />25 Real Companies</span>
@@ -741,7 +741,7 @@ const App = () => {
           title="Dashboard 3 — Jobs in the Age of AI (2024–2030)"
           subtitle="30,000 job titles · 8 industries · projections to 2030"
           badge="4 Insights"
-          defaultOpen={false}
+          defaultOpen={true}
         >
           <div className="dash1-meta">
             <span className="meta-chip"><BarChart3 size={12} style={{ display: 'inline', marginRight: 4, verticalAlign: 'middle' }} />30,000 Job Titles</span>
