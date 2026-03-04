@@ -8,7 +8,7 @@
 
 ---
 
-![Portfolio Report](./portfolio_report.png)
+![Portfolio Report](./Screenshot%202026-03-04%20095355.png)
 
 ---
 
@@ -32,7 +32,7 @@ Everyone has an opinion about AI. This project has data instead.
 
 ## Dashboard 1 — The Startup World
 
-![Startup Landscape Dashboard](./dashboard1_startup.png)
+![Startup Landscape Dashboard](./Screenshot%202026-03-04%20100228.png)
 
 **500 startups · 8 industries · 5 global regions**
 
