@@ -1,5 +1,5 @@
 /* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap&display=swap');
 
 /* ── Design Tokens ── */
 :root {
@@ -75,80 +75,7 @@ strong {
   font-weight: 600;
 }
 
-/* ── Legacy Layout Helpers ── */
-.dash-section {
-  margin: 1.5rem 0 2.5rem;
-  padding-left: 1.5rem;
-  border-left: 3px solid var(--border-color);
-}
-
-/* ── Tag System ── */
-.tag-container {
-  display: flex;
-  gap: 0.75rem;
-  margin: 1.5rem 0 3rem;
-  flex-wrap: wrap;
-}
-
-.tag {
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  background: var(--bg-muted);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-}
-
-.tag.accent {
-  background: #fde2e4;
-  color: #c94a4a;
-  border-color: transparent;
-}
-
-/* ── Dashboard Mockup ── */
-.dashboard-view {
-  background: #fff;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-}
-
-/* ── Dash Card ── */
-.dash-card {
-  background: #fff;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.dash-card-header {
-  margin-bottom: 1.5rem;
-}
-
-.dash-title {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-secondary);
-  font-weight: 700;
-}
-
-.dash-subtitle {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-top: 0.25rem;
-  color: #000;
-}
-
-.dash-body {
-  flex: 1;
-  min-height: 150px;
-}
+/* (legacy stub classes removed — unused since refactor) */
 
 /* ── Report Header ── */
 .pro-header {
@@ -401,12 +328,14 @@ strong {
 .collapsible-body {
   max-height: 0;
   overflow: hidden;
+  /* Use a realistic cap so the close animation fires at correct speed */
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .collapsible-body-open {
-  max-height: 9999px;
-  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 3000px is enough for the tallest dashboard — avoids the 9999px animation lag */
+  max-height: 3000px;
+  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .collapsible-inner {

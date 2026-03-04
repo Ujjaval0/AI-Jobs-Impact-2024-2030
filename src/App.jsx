@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 
 import {
   ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip,
@@ -91,13 +91,14 @@ const ReportHeader = memo(() => (
 ));
 
 // ── COLLAPSIBLE DASHBOARD SECTION ──────────────────────────────────────────────
-const CollapsibleDashboard = ({ title, subtitle, defaultOpen = false, badge, children }) => {
+const CollapsibleDashboard = memo(({ title, subtitle, defaultOpen = false, badge, children }) => {
   const [open, setOpen] = useState(defaultOpen);
+  const toggle = useCallback(() => setOpen(o => !o), []);
   return (
     <div className="collapsible-section">
       <button
         className={`collapsible-header ${open ? 'collapsible-open' : ''}`}
-        onClick={() => setOpen(o => !o)}
+        onClick={toggle}
         aria-expanded={open}
       >
         <div className="collapsible-left">
@@ -119,7 +120,7 @@ const CollapsibleDashboard = ({ title, subtitle, defaultOpen = false, badge, chi
       </div>
     </div>
   );
-};
+});
 
 // ── CUSTOM TOOLTIPS ────────────────────────────────────────────────────────────
 const TooltipBox = ({ children }) => (
